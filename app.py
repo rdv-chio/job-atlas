@@ -11,16 +11,16 @@ iris_df = pd.read_csv("data/data_1.txt",
 feature_names = iris_df.columns[0:-1].values.tolist()
 
 # Create the main plot
-def create_figure(current_feature_name, bins):
-	p = Histogram(iris_df, current_feature_name, title=current_feature_name, color='Species', 
-	 	bins=bins, legend='top_right', width=600, height=400)
+#def create_figure(current_feature_name, bins):
+#	p = Histogram(iris_df, current_feature_name, title=current_feature_name, color='Species', 
+#	 	bins=bins, legend='top_right', width=600, height=400)
 
 	# Set the x axis label
-	p.xaxis.axis_label = current_feature_name
+#	p.xaxis.axis_label = current_feature_name
 
 	# Set the y axis label
-	p.yaxis.axis_label = 'Count'
-	return p
+#	p.yaxis.axis_label = 'Count'
+#	return p
 
 # Index page
 @app.route('/')
@@ -31,12 +31,12 @@ def index():
 		current_feature_name = "Sepal Length"
 
 	# Create the plot
-	plot = create_figure(current_feature_name, 10)
+#	plot = create_figure(current_feature_name, 10)
 		
 	# Embed plot into HTML via Flask Render
-	script, div = components(plot)
-	return render_template("index.html", script=script, div=div,
-		feature_names=feature_names,  current_feature_name=current_feature_name)
+#	script, div = components(plot)
+#	return render_template("index.html", script=script, div=div,
+#		feature_names=feature_names,  current_feature_name=current_feature_name)
 
 # With debug=True, Flask server will auto-reload 
 # when there are code changes
