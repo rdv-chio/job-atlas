@@ -7,7 +7,7 @@ from bokeh.embed import components
 app = Flask(__name__)
 
 # Load the Iris Data Set
-iris_df = pd.read_csv("data/data_1.txt", 
+iris_df = pd.read_csv("~/data/data_1.txt", 
     names=["Sepal Length", "Sepal Width", "Petal Length", "Petal Width", "Species"])
 feature_names = iris_df.columns[0:-1].values.tolist()
 
